@@ -11,6 +11,7 @@ def mirrorVerticalRight():
     for x in range (0, width/2):
         for y in range (0, height):
             setColor(getPixel(mypic, x, y), getColor(getPixel(mypic,width-x-1, y)))
+    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontal.jpg")
     repaint(mypic)
 
 def mirrorVerticalLeft():
@@ -29,8 +30,7 @@ def mirrorHorizontalBottom():
     for x in range (0, width):
         for y in range (0, height/2):
             setColor(getPixel(mypic, x, y), getColor(getPixel(mypic,x, height-y-1)))
-    file = "/Volumes/HDD/Programing/CSUMB/CSUMBfolio/CST205/Lab4/temp.JPG"
-    writePictureTo(mypic, file)
+    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontal.jpg")
     repaint(mypic)
 
 def mirrorHorizontalTop():
