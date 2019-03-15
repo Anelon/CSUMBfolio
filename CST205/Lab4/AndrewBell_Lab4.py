@@ -1,14 +1,8 @@
 #Sample Code
 def get_pic():
-  return makePicture(pickAFile())
-
-def halfRed():
-   pic = get_pic()
-   pixels = getPixels(pic)
-   for p in pixels:
-     r = getRed(p)
-     setRed(p, r*0.5)
-   repaint(pic)
+    file = pickAFile()
+    print(file)
+    return makePicture(file)
 
 def mirrorVerticalRight():
     mypic = get_pic();
@@ -35,6 +29,8 @@ def mirrorHorizontalBottom():
     for x in range (0, width):
         for y in range (0, height/2):
             setColor(getPixel(mypic, x, y), getColor(getPixel(mypic,x, height-y-1)))
+    file = "/Volumes/HDD/Programing/CSUMB/CSUMBfolio/CST205/Lab4/temp.JPG"
+    writePictureTo(mypic, file)
     repaint(mypic)
 
 def mirrorHorizontalTop():
