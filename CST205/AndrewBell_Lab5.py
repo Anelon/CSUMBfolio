@@ -48,7 +48,7 @@ def lowerHighs(mypic):
                 g = g - over * lower
                 b = b - over * lower
                 setColor(p, makeColor(r,g,b))
-    explore(mypic)
+    #explore(mypic)
 
 def betterBnW(pic):
     width = getWidth(pic)
@@ -62,7 +62,7 @@ def betterBnW(pic):
             avg = (r*0.299 + g*0.587 + b*0.114)
             luminanceColors = makeColor(avg,avg,avg)
             setColor(px, luminanceColors)
-    repaint(pic)
+    #repaint(pic)
 
 def mirrorVerticalRight(mypic):
     width = getWidth(mypic)
@@ -104,7 +104,7 @@ def artify(pic):
             elif b < 192: b = 160
             else: b = 220
             setColor(p, makeColor(r,g,b))
-    repaint(pic)
+    #repaint(pic)
 
 def mirrorHorizontalTop(mypic):
     width = getWidth(mypic)
@@ -112,7 +112,7 @@ def mirrorHorizontalTop(mypic):
     for x in range (0, width):
         for y in range (0, height/2):
             setColor(getPixel(mypic, x, height-y-1), getColor(getPixel(mypic,x, y)))
-    repaint(mypic)
+    #repaint(mypic)
 
 def makeCollage():
     width = 3300
