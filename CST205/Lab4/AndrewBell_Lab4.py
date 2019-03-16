@@ -4,18 +4,18 @@ def get_pic():
     print(file)
     return makePicture(file)
 
-def mirrorVerticalRight():
-    mypic = get_pic();
+def mirrorVerticalRight(mypic):
+    #mypic = get_pic();
     width = getWidth(mypic)
     height = getHeight(mypic)
     for x in range (0, width/2):
         for y in range (0, height):
             setColor(getPixel(mypic, x, y), getColor(getPixel(mypic,width-x-1, y)))
-    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontal.jpg")
+    writePictureTo(mypic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorVertRight.jpg")
     repaint(mypic)
 
-def mirrorVerticalLeft():
-    mypic = get_pic();
+def mirrorVerticalLeft(mypic):
+    #mypic = get_pic();
     width = getWidth(mypic)
     height = getHeight(mypic)
     for x in range (0, width/2):
@@ -23,27 +23,28 @@ def mirrorVerticalLeft():
             setColor(getPixel(mypic, width-x-1, y), getColor(getPixel(mypic,x, y)))
     repaint(mypic)
 
-def mirrorHorizontalBottom():
-    mypic = get_pic();
+def mirrorHorizontalBottom(mypic):
+    #mypic = get_pic();
     width = getWidth(mypic)
     height = getHeight(mypic)
     for x in range (0, width):
         for y in range (0, height/2):
             setColor(getPixel(mypic, x, y), getColor(getPixel(mypic,x, height-y-1)))
-    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontal.jpg")
+    writePictureTo(mypic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontalBot.jpg")
     repaint(mypic)
 
-def mirrorHorizontalTop():
-    mypic = get_pic();
+def mirrorHorizontalTop(mypic):
+    #mypic = get_pic();
     width = getWidth(mypic)
     height = getHeight(mypic)
     for x in range (0, width):
         for y in range (0, height/2):
             setColor(getPixel(mypic, x, height-y-1), getColor(getPixel(mypic,x, y)))
+    writePictureTo(mypic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorHorizontalTop.jpg")
     repaint(mypic)
 
-def mirrorAll():
-    mypic = get_pic();
+def mirrorAll(mypic):
+    #mypic = get_pic();
     width = getWidth(mypic)
     height = getHeight(mypic)
     for x in range (0, width/2):
@@ -51,6 +52,7 @@ def mirrorAll():
             setColor(getPixel(mypic, width-x-1, y), getColor(getPixel(mypic, x, y)))
             setColor(getPixel(mypic, x, height-y-1), getColor(getPixel(mypic, x, y)))
             setColor(getPixel(mypic, width-x-1, height-y-1), getColor(getPixel(mypic, x, y)))
+    writePictureTo(mypic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mirrorQuad.jpg")
     repaint(mypic)
 
 def simpleCopy(mypic):
@@ -60,7 +62,6 @@ def simpleCopy(mypic):
     for x in range (0, width):
         for y in range (0, height):
             setColor(getPixel(pic, x, y), getColor(getPixel(mypic, x, y)))
-    show(pic)
     return pic
 
 def rotatePic(mypic):
@@ -71,6 +72,10 @@ def rotatePic(mypic):
         for y in range (0, height):
             setColor(getPixel(pic, y, width-x-1), getColor(getPixel(mypic, x, y)))
     show(pic)
+    #this does not work
+    #writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\rotate.jpg")
+    #this does
+    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mrotate.jpg")
     return pic
 
 def shrink(mypic):
@@ -81,4 +86,14 @@ def shrink(mypic):
         for y in range (0, height):
             setColor(getPixel(pic, x, y), getColor(getPixel(mypic, x*2, y*2)))
     show(pic)
+    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\shrink.jpg")
     return pic
+
+def runAll():
+    pic = get_pic()
+    shrink(simpleCopy(pic))
+    rotatePic(simpleCopy(pic))
+    mirrorVerticalRight(simpleCopy(pic))
+    mirrorHorizontalBottom(simpleCopy(pic))
+    mirrorHorizontalTop(simpleCopy(pic))
+    mirrorAll(simpleCopy(pic))
