@@ -72,10 +72,10 @@ def rotatePic(mypic):
         for y in range (0, height):
             setColor(getPixel(pic, y, width-x-1), getColor(getPixel(mypic, x, y)))
     show(pic)
-    #this does not work
+    #this does not work (need "\\" before character r, t, n possibly others)
     #writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\rotate.jpg")
     #this does
-    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\mrotate.jpg")
+    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab4\\rotate.jpg")
     return pic
 
 def shrink(mypic):
