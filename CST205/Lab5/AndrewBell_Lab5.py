@@ -119,42 +119,45 @@ def makeCollage():
     height = 2550
     x = 0
     y = 0
+    file = "/Users/Cinderhulk/programing/CSUMB/CSUMBfolio/CST205/Lab5/Lab5Imgs/"
     pic = makeEmptyPicture(width, height)
-    pyCopy(makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\HayBack.jpg"), pic, 0, 0)
+    pyCopy(makePicture(file+"HayBack.jpg"), pic, 0, 0)
     #Make array for imgs
     imgs = []
     #first Row of imgs
-    castle = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Castle.jpg")
-    imgs.append(castle)
 
-    SkyBuild = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\SkyBuilding.jpg")
+    castle = makePicture(file+"Castle.jpg")
+    imgs.append(castle)
+    print("Caslte")
+
+    SkyBuild = makePicture(file+"SkyBuilding.jpg")
     SkyBuild = rotate(SkyBuild)
     SkyBuild = mirrorVerticalRight(SkyBuild)
     imgs.append(SkyBuild)
 
-    Aquarium = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Aquarium.jpg")
+    Aquarium = makePicture(file+"Aquarium.jpg")
     imgs.append(Aquarium)
 
     #2nd row of imgs
-    Inari = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Inari.jpg")
+    Inari = makePicture(file+"Inari.jpg")
     artify(Inari)
     imgs.append(Inari)
 
-    Train = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\TrainLine.jpg")
+    Train = makePicture(file+"TrainLine.jpg")
     imgs.append(Train) #What?
 
-    CastleBloss = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\CastleBloss.jpg")
+    CastleBloss = makePicture(file+"CastleBloss.jpg")
     betterBnW(CastleBloss)
     imgs.append(CastleBloss)
 
     #3rd row of imgs
-    Station = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Station.jpg")
+    Station = makePicture(file+"Station.jpg")
     imgs.append(Station)
 
-    Tori = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Tori.jpg")
+    Tori = makePicture(file+"Tori.jpg")
     imgs.append(rotate(Tori))
 
-    Fuji = makePicture("F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\Fuji.jpg")
+    Fuji = makePicture(file+"Fuji.jpg")
     mirrorHorizontalTop(Fuji)
     imgs.append(Fuji)
     #place image
@@ -167,5 +170,5 @@ def makeCollage():
             y += getHeight(img) + 40 #20 for extra spacing
 
     explore(pic)
-    writePictureTo(pic, "F:\Programing\CSUMB\CSUMBfolio\CST205\Lab5Imgs\out.jpg")
+    writePictureTo(pic, "/Users/Cinderhulk/programing/CSUMB/CSUMBfolio/CST205/Lab5/out.jpg")
     return pic
