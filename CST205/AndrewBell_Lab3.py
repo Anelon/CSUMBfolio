@@ -1,4 +1,3 @@
-#Sample Code
 def get_pic():
     return makePicture(pickAFile())
 
