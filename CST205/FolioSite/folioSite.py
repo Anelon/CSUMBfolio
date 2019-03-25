@@ -1,7 +1,8 @@
 def get_pic():
     return makePicture(pickAFile())
 
-path = "F:/Programing/CSUMB/CSUMBfolio/CST205/FolioSite/"
+#path = "F:/Programing/CSUMB/CSUMBfolio/CST205/FolioSite/"
+path = "/Users/Cinderhulk/Programing/CSUMB/CSUMBfolio/CST205/FolioSite/"
 
 def artify():
   file = pickAFile()
@@ -87,4 +88,41 @@ def shrink(mypic):
        setColor(getPixel(pic, x, y), getColor(getPixel(mypic, x*2, y*2)))
   show(pic)
   writePictureTo(pic, path + "shrink.jpg")
+  return pic
+
+def betterBnW(pic):
+  width = getWidth(pic)
+  height = getHeight(pic)
+  for x in range (0, width):
+    for y in range (0, height):
+      px = getPixel(pic, x, y)
+      r = getRed(px)
+      g = getGreen(px)
+      b = getBlue(px)
+      avg = (r*0.299 + g*0.587 + b*0.114)
+      luminanceColors = makeColor(avg,avg,avg)
+      setColor(px, luminanceColors)
+
+def lineDraw(pic):
+  writePictureTo(pic, path + "linePre.jpg")
+  betterBnW(pic)
+  width = getWidth(pic)
+  height = getHeight(pic)
+  tolerance = 35
+  for x in range(0, width):
+    for y in range(0,height):
+      p = getPixel(pic, x, y)
+      pLum = getRed(p) + getBlue(p) + getBlue(p)
+      if x + 1 < width:
+        c = getPixel(pic, x + 1, y)
+        cLum = getRed(c) + getBlue(c) + getBlue(c)
+        if abs(pLum - cLum) > tolerance: setColor(p, black)
+        else: setColor(p, white)
+      if y + 1 < height:
+        c = getPixel(pic, x, y + 1)
+        cLum = getRed(c) + getBlue(c) + getBlue(c)
+        if abs(pLum - cLum) > tolerance: setColor(p, black)
+        else: setColor(p, white)
+  writePictureTo(pic, path + "line.jpg")
+  explore(pic)
   return pic
