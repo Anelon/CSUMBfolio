@@ -17,19 +17,18 @@ def pullHeadlines():
     file = open(pickAFile(), "r")
     global text
     text = file.read()
-    startStr = 'uscb-margin-TB-02 uscb-title-3'
+    startStr = 'uscb-margin-TB-02 uscb-title-3">'
     endStr = "</p>"
     headlines = []
     start = 0
     start = text.find(startStr, start)
     end = text.find(endStr, start)
-    print(start)
+    #print(start)
     while not start == -1:
-        headlines.append(text[start+len(startStr):end])
+        headlines.append(text[start+len(startStr):end].strip())
         start = end
         start = text.find(startStr, start)
         end = text.find(endStr, start)
-        print(start)
     print("**** U.S. Census Bureau News! ****")
     for line in headlines:
         print(line)
