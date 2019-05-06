@@ -4,12 +4,12 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class Main 
+public class Main
 {
    final static int MAX_HOURS = 20;
    final static int MIN_HOURS = 12;
 
-   public static void main(String[] args) 
+   public static void main(String[] args)
    {
       //set up scanner object
       Scanner keyboard = new Scanner(System.in);

@@ -62,7 +62,8 @@ def betterBnW(pic):
             avg = (r*0.299 + g*0.587 + b*0.114)
             luminanceColors = makeColor(avg,avg,avg)
             setColor(px, luminanceColors)
-    #repaint(pic)
+    repaint(pic)
+    writePictureTo(pic, "/Users/Cinderhulk/programing/CSUMB/CSUMBfolio/CST205/Lab5/bnwout.jpg")
 
 def mirrorVerticalRight(mypic):
     width = getWidth(mypic)
