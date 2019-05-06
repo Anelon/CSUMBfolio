@@ -12,10 +12,10 @@ public class Main {
       Scanner keyboard = new Scanner(System.in);
 
       System.out.print("Please enter your first name: ");
-      String firstName = keyboard.next();
+      String firstName = keyboard.nextLine();
 
       System.out.print("Please enter your last name: ");
-      String lastName = keyboard.next();
+      String lastName = keyboard.nextLine();
 
       String fullName = firstName + " " + lastName;
       //print full name

@@ -15,10 +15,10 @@ public class Main
       Scanner keyboard = new Scanner(System.in);
 
       System.out.print("Please enter your first name: ");
-      String firstName = keyboard.next();
+      String firstName = keyboard.nextLine();
 
       System.out.print("Please enter your last name: ");
-      String lastName = keyboard.next();
+      String lastName = keyboard.nextLine();
 
       String fullName = firstName + " " + lastName;
       //print full name
@@ -42,7 +42,7 @@ public class Main
 }
 /* ---------- paste of run ----------
 
-/* ---------- input1 ----------*/
+ ---------- input1 ----------
 
 Please enter your first name: Andrew 
 Please enter your last name: Bell 
@@ -54,7 +54,7 @@ andrew bell
 How many hours did you work to 3 decimal places(12-20): 12.324 
 You worked: 12.3
 
-/* ---------- input2 ----------*/
+ ---------- input2 ----------
 
 Please enter your first name: Tester 
 Please enter your last name: Person 
@@ -65,6 +65,18 @@ tester person
 
 How many hours did you work to 3 decimal places(12-20): 19.483 
 You worked: 19.5
+
+ ---------- input3 ----------
+
+Please enter your first name: Durian 
+Please enter your last name: Testing Son 
+Durian Testing Son
+Name Length is 18
+DURIAN TESTING SON
+durian testing son
+
+How many hours did you work to 3 decimal places(12-20): 15.932 
+You worked: 15.9
 
    ---------- paste of run ----------*/
 
