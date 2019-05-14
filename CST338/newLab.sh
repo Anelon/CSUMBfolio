@@ -1,4 +1,4 @@
-name="Lab"
+name="Assig"
 labTemp="tempLab"
 labNum=1
 while [[ -e "$name$labNum" ]] ; do
