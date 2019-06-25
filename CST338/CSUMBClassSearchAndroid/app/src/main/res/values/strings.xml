@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CSUMB Class Search</string>
+    <string name="searchButton">Search</string>
+    <string name="searchText">Enter a Class Number to Search:</string>
+    <string name="searchInput">Number</string>
+    <string name="result">Classes</string>
+    <string name="classTag">CST </string>
+    <string name="csumbLogoText">CSUMB Logo</string>
+</resources>

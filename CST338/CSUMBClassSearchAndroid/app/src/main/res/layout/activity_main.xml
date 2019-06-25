@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/searchText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/textColor" />
+
+    <EditText
+        android:id="@+id/searchNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:autofillHints="338"
+        android:backgroundTint="@color/buttonColor"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/searchInput"
+        android:inputType="number"
+        android:textColor="@color/textColor" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/buttonColor"
+        android:text="@string/searchButton"
+        android:textColor="@color/textColor" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00B82D2D">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:contentDescription="@string/csumbLogoText"
+                app:srcCompat="@drawable/csumblogo" />
+
+            <TextView
+                android:id="@+id/searchResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/result"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
