@@ -1,0 +1,36 @@
+Arguments: 
+  /snap/node/2674/bin/node /snap/node/2674/bin/yarn.js global dir
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  15.0.0-nightly202004275ee1e31e38
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, write
+      at writeSync (fs.js:694:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+      at writeOrBuffer (_stream_writable.js:353:12)
+      at SyncWriteStream.Writable.write (_stream_writable.js:303:12)
+      at ConsoleReporter._log (/snap/node/2674/lib/cli.js:96769:17)
+      at ConsoleReporter.log (/snap/node/2674/lib/cli.js:96757:10)
+      at dir (/snap/node/2674/lib/cli.js:36256:14)
+      at Object.<anonymous> (/snap/node/2674/lib/cli.js:25940:25)
+      at Generator.next (<anonymous>)
+      at step (/snap/node/2674/lib/cli.js:310:30)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
